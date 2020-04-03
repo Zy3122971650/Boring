@@ -98,6 +98,7 @@ def judgeResult(chess_board):
             for chess in row:
                 if chess == 0:
                     flag = 1
+                    break
         flag_init_chess_board = iSContinueGame(flag, chess_board)
     return flag_init_chess_board
 
@@ -172,6 +173,7 @@ def main():
             print('输入位置已存在棋子，重新落子', end='',flush=True)
         if judgeResult(chess_board) == 1:
             chess_board = [[0]*3 for i in range(3)]
+            chess_board_print(chess_board)
 
 
 if __name__ == "__main__":
