@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+
 int *translateLocation(int rawLocation)
 {
     int m, n;
@@ -154,7 +155,7 @@ int isInputLegal(int input)
     return 0;
 }
 
-void chess_board_print(int chess_board[][3])
+void chess_board_print(int chess_board[3][3]) /*让棋盘显示出来，好看*/
 {
     printf("%c|%c|%c\n%c|%c|%c\n%c|%c|%c\n",
            chess_board[0][0],
@@ -278,8 +279,7 @@ void game(int *game_model, int chess_board[][3])
         }
     }
 };
-
-void main()
+int main()
 {
     int chess_board[3][3] = {
         '?',
